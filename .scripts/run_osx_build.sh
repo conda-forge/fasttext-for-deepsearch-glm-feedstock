@@ -8,6 +8,8 @@ set -xe
 
 MINIFORGE_HOME=${MINIFORGE_HOME:-${HOME}/miniforge3}
 MINIFORGE_HOME=${MINIFORGE_HOME%/} # remove trailing slash
+mkdir -p ${MINIFORGE_HOME}
+
 ( startgroup "Provisioning base env with pixi" ) 2> /dev/null
 curl -fsSL https://pixi.sh/install.sh | bash
 export PATH="~/.pixi/bin:$PATH"
