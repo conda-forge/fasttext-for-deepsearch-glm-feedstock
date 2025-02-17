@@ -9,9 +9,11 @@ package:
 source:
   url: https://github.com/PeterStaar-IBM/fastText/archive/refs/tags/v${{ version }}.tar.gz
   sha256: f5772a90dc30893dfcd99efbd4fb0dc46f5d7a8388e9da5cc41a8bd8b4d94e1e
+  patches:
+    - setup.patch
 
 build:
-  number: 3
+  number: 4
   skip: win
   script: |
     cmake -GNinja \
