@@ -13,7 +13,7 @@ source:
     - setup.patch
 
 build:
-  number: 4
+  number: 5
   skip: win
   script: |
     cmake -GNinja \
@@ -33,7 +33,7 @@ requirements:
         - pybind11
     - ${{ compiler('cxx') }}
     - ${{ stdlib("c") }}
-    - cmake
+    - cmake <4
     - ninja
   host:
     - python
